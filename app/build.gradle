@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 27
     defaultConfig {
-        applicationId "com.example.zdouble.leafpick"
+        applicationId "com.example.zdouble.leafpic"
         minSdkVersion 15
         targetSdkVersion 27
         versionCode 1

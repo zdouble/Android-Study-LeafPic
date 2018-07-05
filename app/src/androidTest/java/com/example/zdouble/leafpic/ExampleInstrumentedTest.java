@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.zdouble.leafpick", appContext.getPackageName());
+        assertEquals("com.example.zdouble.leafpic", appContext.getPackageName());
     }
 }
