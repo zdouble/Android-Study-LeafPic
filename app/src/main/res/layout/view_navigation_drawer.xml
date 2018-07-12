@@ -1,19 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:orientation="vertical"
-       android:foreground="@drawable/ripple">
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="sgfs"/>
-   </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:foreground="@drawable/ripple"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/md_white_1000"
+            android:textSize="@dimen/text_size_large" />
+
+        <TextView
+            android:id="@+id/navigation_drawer_header_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.example.zdouble.leafpic.views.navigation_drawer.NavigationEntry
+            android:id="@+id/navigation_item_albums"
+            app:itemIcon="@string/icon_albums"
+            app:itemText="@string/local_folder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.example.zdouble.leafpic.views.navigation_drawer.NavigationEntry>
+    </LinearLayout>
 
 </LinearLayout>

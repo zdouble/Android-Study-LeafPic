@@ -21,6 +21,7 @@
     <com.example.zdouble.leafpic.views.navigation_drawer.NavigationDrawer
         android:layout_width="300dp"
         android:layout_height="match_parent"
+        android:background="#fff"
         android:layout_gravity="start">
 
     </com.example.zdouble.leafpic.views.navigation_drawer.NavigationDrawer>
