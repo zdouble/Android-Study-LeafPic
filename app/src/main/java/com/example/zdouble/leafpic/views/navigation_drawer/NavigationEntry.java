@@ -6,6 +6,7 @@ import android.content.res.TypedArray;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -49,9 +50,10 @@ public class NavigationEntry extends LinearLayout {
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.NavigationEntry);
         String iconText = typedArray.getString(R.styleable.NavigationEntry_itemIcon);
         String text = typedArray.getString(R.styleable.NavigationEntry_itemText);
+        int iconColor = typedArray.getInt(R.styleable.NavigationEntry_itemIconColor,0XFFFFFFFF);
         typedArray.recycle();
 
-        setIcon(iconText);
+        setIcon(iconText,iconColor);
         setText(text);
     }
 
@@ -59,8 +61,8 @@ public class NavigationEntry extends LinearLayout {
         itemText.setText(text);
     }
 
-    private void setIcon(String iconText) {
-        itemIcon.setIcon(new IconicsDrawable(getContext(),iconText).color(getResources().getColor(R.color.md_grey_300)));
+    private void setIcon(String iconText, int iconColor) {
+        itemIcon.setIcon(new IconicsDrawable(getContext(),iconText).color(iconColor));
     }
 
     private void setupView(Context context) {
